@@ -1,4 +1,10 @@
+C:\Users\three\Documents\NetBeansProjects\FirstWeb\src\main\java\com\ldn\configs\HibernateConfig.java
 C:\Users\three\Documents\NetBeansProjects\FirstWeb\src\main\java\com\ldn\configs\DispatcherServletInitializer.java
 C:\Users\three\Documents\NetBeansProjects\FirstWeb\src\main\java\com\ldn\controllers\HomeController.java
 C:\Users\three\Documents\NetBeansProjects\FirstWeb\src\main\java\com\ldn\pojo\User.java
 C:\Users\three\Documents\NetBeansProjects\FirstWeb\src\main\java\com\ldn\configs\WebApplicationContextConfig.java
+C:\Users\three\Documents\NetBeansProjects\FirstWeb\src\main\java\com\ldn\service\CategoryService.java
+C:\Users\three\Documents\NetBeansProjects\FirstWeb\src\main\java\com\ldn\pojo\Category.java
+C:\Users\three\Documents\NetBeansProjects\FirstWeb\src\main\java\com\ldn\repository\CategoryRepository.java
+C:\Users\three\Documents\NetBeansProjects\FirstWeb\src\main\java\com\ldn\repository\impl\CategoreRepositoryImpl.java
+C:\Users\three\Documents\NetBeansProjects\FirstWeb\src\main\java\com\ldn\service\impl\CategoryServiceImpl.java

@@ -19,29 +19,10 @@
         <link href="${CSS}" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <h1>Your majesty!</h1>
-        <h1>Xin chao ${name}</h1>
-        <a href="<c:url value="/test"/>">Forward/Redirect</a>
-        <c:url value="/images/khoasol.jpg" var="img" />
-        <div>
-            <img src="${img}" alt="alt"/>
-        </div>
-        <c:if test="${fullName != null}">
-            <h1>${fullName}</h1>
-        </c:if>
-        <ol>
-            <c:forEach var="u" items="${users}">
-                <li>${u.fName} ${u.lName}</li>
+        <ul>
+            <c:forEach var="cat" items="${categories}" >
+               <li>${cat.id} - ${cat.name}</li> 
             </c:forEach>
-        </ol>
-        <c:url value="/hello-post" var="postAct" />
-        <form:form method="post" action="${postAct}" modelAttribute="user">
-            <mes:message code="label.username" />
-            <form:input path="fName" />
-            <br>
-            <mes:message code="label.password" />
-            <form:input path="lName" />
-            <input type="submit" value="send" />
-        </form:form>
+        </ul>
     </body>
 </html>

@@ -5,7 +5,9 @@
  */
 package com.ldn.controllers;
 
+import com.ldn.pojo.Category;
 import com.ldn.pojo.User;
+import com.ldn.service.CategoryService;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -14,6 +16,7 @@ import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,15 +31,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HomeController {
     @Autowired
-    private LocalSessionFactoryBean sessionFactory;
+    private CategoryService categoryService;
+    
     @RequestMapping("/")
+    @Transactional
     public String index(Model model, @RequestParam(required = false) Map<String, String> params) {
-        Session s = sessionFactory.getObject().openSession();
-        Query q = s.createQuery("FROM Category");
         
-        model.addAttribute("categories", q.getResultList());
+        model.addAttribute("categories", this.categoryService.getCategories());
+//         s.close();
         
-        s.close();
         
         
 //        String firstName = params.get("first_name");
